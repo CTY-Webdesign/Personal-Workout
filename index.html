@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Programme Séances</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero__content">
+      <p class="eyebrow">Vitrine des séances</p>
+      <h1>Programme Push / Pull / Jambes</h1>
+      <p class="lead">Une interface simple, moderne, en noir et blanc pour afficher tes séances salle et maison.</p>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="filters" aria-label="Filtres des séances">
+      <button class="chip is-active" data-filter="all">Tout voir</button>
+      <button class="chip" data-filter="push">Push</button>
+      <button class="chip" data-filter="pull">Pull</button>
+      <button class="chip" data-filter="jambes">Jambes</button>
+    </section>
+
+    <div id="workoutGrid" class="grid"></div>
+  </main>
+
+  <template id="workoutCardTemplate">
+    <article class="card">
+      <div class="card__header">
+        <p class="card__tag"></p>
+        <h2 class="card__title"></h2>
+        <p class="card__subtitle"></p>
+      </div>
+      <div class="card__body">
+        <ul class="exercise-list"></ul>
+      </div>
+    </article>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>
